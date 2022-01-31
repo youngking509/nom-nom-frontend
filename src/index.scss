@@ -3,3 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+  'head'
+  'main'
+  'footer';
+}
+
+.navBar, .main, .footer {
+  flex-shrink: 0;
+}
+
+.navbar {
+  grid-area: head;
+}
+
+.main {
+  grid-area: main;
+  padding: 9rem;
+}
+
+.footer {
+  grid-area: footer;
+}

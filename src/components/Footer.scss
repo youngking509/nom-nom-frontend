@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    width: 100vw;
+    background-color: whitesmoke;
+    font-family: 'Dongle', sans-serif;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bite-logo {
+    width: 115px;
+    margin-left: 15px;
+    margin-right: 35px;
+}
+
+.bite {
+    position: relative;
+    top: 10px;
+}
+
+.footer-col1 {
+    margin-right: 35px;
+    .recipes-footer {
+        text-decoration: none;
+        color: #000;
+    }
+    .videos-footer {
+        text-decoration: none;
+        color: #000;
+    }
+    .about-footer {
+        text-decoration: none;
+        color: #000;
+    }
+    .contact-footer {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 38px;
+    margin-right: 15px;
+}
+
+.copyright {
+    font-size: 18px;
+}
