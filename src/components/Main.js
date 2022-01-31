@@ -1,8 +1,8 @@
 //import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 // import pages
-import About from "../pages/about";
-import Contact from "../pages/contact";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import Recipes from "../pages/Recipes";
 import Videos from "../pages/Videos";
