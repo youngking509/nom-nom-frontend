@@ -2,7 +2,10 @@
 
 function Contact() {
     return (
-        <h1>CONTACT</h1>
+        <h1>CONTACT ME RN ahkbfebfbbbfeab
+            CONTACT ME RN ahkbfebfbbbfeab
+        </h1>
+        
     );
 }
 
