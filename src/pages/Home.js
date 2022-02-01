@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 function Home() {
     const apiKey = '4dc09cfe49ba42d4a768ccef738b15bb';
     
-    // title, image, if else vegetarian or vegan, readyInMinutes, instructions, dishTypes
+    // -----title, image, if else vegetarian or vegan, readyInMinutes, instructions, dishTypes
     
     const [recipes, setRecipes] = useState(null);
     const [loading, setLoading] = useState(true);
