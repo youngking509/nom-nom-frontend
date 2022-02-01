@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Contact from './pages/Contact';
+// import Videos from './pages/Videos';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Main />
       <Footer />
       {/* <Contact /> */}
+      {/* <Videos /> */}
     </div>
   );
 }
