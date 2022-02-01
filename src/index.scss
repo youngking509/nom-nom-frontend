@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+// =========================== APP ===================================
 
 .App {
   height: 100vh;
@@ -13,6 +17,7 @@
   'head'
   'main'
   'footer';
+  font-family: 'Poppins', sans-serif;
 }
 
 .navBar, .main, .footer {
@@ -23,11 +28,159 @@
   grid-area: head;
 }
 
+// =========================== MAIN ===================================
+
 .main {
   grid-area: main;
-  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 9rem 5rem;
 }
+
+// =========================== HOME ===================================
+
+// =========================== RECIPES ================================
+
+// =========================== RECIPES ID =============================
+
+// =========================== ABOUT US ===============================
+
+
+.circle-aboutus {
+  width: 15rem;
+  animation: circle-spin infinite 25s linear;
+}
+
+@keyframes circle-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-aboutus {
+  width: 15rem;
+  height: 15rem;
+}
+
+.bite-aboutus {
+  width: 10rem;
+  position: relative;
+  bottom: 200px;
+  left: 35px;
+}
+
+.aboutus-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.aboutus-content {
+  margin-bottom: 10px;
+  max-width: 700px;
+}
+
+.members {
+  list-style-type: none;
+}
+
+
+
+// =========================== CONTACT ================================
+
+.contact-form {
+  background-color: pink;
+  width: 350px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0px;
+}
+
+.contact-fieldset {
+  border-radius: 10px;
+  border: .5px solid gray;
+  margin: 5px;
+}
+
+.contact-input {
+  height: 40px;
+  width: 90%;
+  margin: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+
+  &:focus {
+    outline: 0;
+    border: 2px solid lightcoral;
+  }
+}
+
+.contact-textarea {
+  max-width: 266.39px;
+  min-width: 266.39px;
+  margin: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+
+  &:focus {
+    outline: 0;
+    border: 2px solid lightcoral;
+  }
+}
+
+.submit-btn {
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+  left: 225px;
+
+  &:hover{
+    background-color: yellowgreen;
+  }
+}
+
+// =========================== VIDEOS =================================
+
+// =========================== FOOTER =================================
 
 .footer {
   grid-area: footer;
+}
+
+// =========================== MEDIA ==================================
+
+@media screen and (max-width: 500px) {
+  .main {
+    margin: 9rem 1rem;
+  }
+
+  .logo-aboutus {
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .circle-aboutus {
+    width: 25rem;
+  }
+
+  .bite-aboutus {
+    width: 17rem;
+    position: relative;
+    bottom: 330px;
+    left: 60px;
+  }
+
+  .aboutus-content {
+    width: 90vw;
+  }
 }
