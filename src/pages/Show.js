@@ -15,12 +15,12 @@ function Show(props) {
     const handleSubmit = (evt) => {
         evt.preventDefault();
         props.updatePeopleRecipe(editForm, eachRecipe._id);
-        props.history.push('/');
+        props.history.push('/recipes');
     };
 
     const removeRecipe = () => {
         props.deletePeopleRecipe(eachRecipe._id);
-        props.history.push('/');
+        props.history.push('/recipes');
     };
 
     return (
