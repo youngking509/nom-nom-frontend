@@ -6,7 +6,7 @@
     align-items: center;
     height: 160px;
     width: 100vw;
-    background-color: whitesmoke;
+    background-color: #000;
     font-family: 'Dongle', sans-serif;
 }
 
@@ -25,26 +25,28 @@
 .bite {
     position: relative;
     top: 10px;
+    filter: invert(100%) sepia(4%) saturate(15%) hue-rotate(120deg) brightness(107%) contrast(105%);
+    //filter: invert(58%) sepia(100%) saturate(5453%) hue-rotate(350deg) brightness(90%) contrast(82%);
+}
+
+.logoText {
+    filter: invert(100%) sepia(4%) saturate(15%) hue-rotate(120deg) brightness(107%) contrast(105%);
 }
 
 .footer-col1 {
     margin-right: 35px;
     .recipes-footer {
         text-decoration: none;
-        color: #000;
+        color: #fff;
     }
-    .videos-footer {
+    .videos-footer, .about-footer, .contact-footer {
         text-decoration: none;
-        color: #000;
+        color: #fff;
     }
-    .about-footer {
-        text-decoration: none;
-        color: #000;
-    }
-    .contact-footer {
-        text-decoration: none;
-        color: #000;
-    }
+}
+
+.footer-col2 {
+    color: #fff;
 }
 
 .footer-right {
@@ -54,8 +56,24 @@
     position: relative;
     top: 38px;
     margin-right: 15px;
+    color: #fff;
 }
 
 .copyright {
     font-size: 18px;
+    color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .footer-right {
+        position: relative;
+        top: -10px;
+    }
 }
