@@ -1,11 +1,12 @@
 // async await the spoonacular API and pass the info in the section 
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 //import SearchIcon from '@mui/icons-material/Search';
 
 function Home() {
-    const apiKey = '7b50685c1e6147f3ad68fad5e24e9fcd';
+    const apiKey = '4dc09cfe49ba42d4a768ccef738b15bb';
     
     // title, image, if else vegetarian or vegan, readyInMinutes, instructions, dishTypes
     
@@ -62,6 +63,17 @@ function Home() {
                     ))
                 }
                 </section>
+                <Link to="/videos" className='home-videos-title'>
+                <h1>VIDEOS</h1>
+                </Link>
+                <div className="home-videos-container">
+                    <div className="video1">
+                        <iframe width="360" height="215" src="https://www.youtube.com/embed/-JkcZRBUNtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                    <div className="video2">
+                        <iframe width="360" height="215" src="https://www.youtube.com/embed/TdwrGGv-T6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                </div>
             </div>
         );
     } else {
