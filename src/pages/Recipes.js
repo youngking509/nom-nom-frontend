@@ -27,16 +27,21 @@ function Recipes(props) {
     };
 
     const loaded = () => {
-        return props.peopleRecipe.map((recipe) => (
-            <div key={recipe._id} className="recipe">
-                <Link to={`/recipes/${recipe._id}`}>
-                    <h1> {recipe.title} </h1>
-                </Link>
-                { recipe.image && <img src={recipe.image} alt={recipe.name} />}
-                <p> Ready in {recipe.readyInMinutes} minutes </p>
-                <p> Instructions: {recipe.instructions}</p>
+        return (
+            <div className="rec-container">
+                {props.peopleRecipe.map((recipe) => (
+                <div key={recipe._id} className="rec">
+                    { recipe.image && <img src={recipe.image} alt={recipe.name} className='rec-img'/>}
+                    <Link to={`/recipes/${recipe._id}`}>
+                        <h3 className='rec-title'> {recipe.title} </h3>
+                    </Link>
+                    <h4>Instructions:</h4>
+                    <p className='rec-description'>{recipe.instructions}</p>
+                    <p className='rec-ready'> Ready in {recipe.readyInMinutes} minutes </p>
+                </div>
+                ))}
             </div>
-        ));
+        );
     };
     const loading = () => {
         return <h1>Recipes...</h1>;
@@ -44,35 +49,56 @@ function Recipes(props) {
 
     return (
         <div className="recipes">
-            <form className='index-form' onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={newForm.title}
-                    name="title"
-                    placeholder="title"
-                    onChange={handleChange}
-                /> <br />
-                <input
-                    type="text"
-                    value={newForm.image}
-                    name="image"
-                    placeholder="image URL"
-                    onChange={handleChange}
-                /> <br />
-                <input
-                    type="text"
-                    value={newForm.readyInMinutes}
-                    name="readyInMinutes"
-                    placeholder="readyInMinutes"
-                    onChange={handleChange}
-                /> <br />
-                <input
-                    type="text"
-                    value={newForm.instructions}
-                    name="instructions"
-                    placeholder="instructions"
-                    onChange={handleChange}
-                /> <br />
+            <form className='create-form' onSubmit={handleSubmit}>
+                <h3>Create A Recipe</h3>
+                <section className='top-form'>
+                    <fieldset className='create-f-title'>
+                        <legend>Title</legend>
+                        <input
+                            type="text"
+                            className='create-form-title'
+                            value={newForm.title}
+                            name="title"
+                            placeholder="title"
+                            onChange={handleChange}
+                        /> 
+                    </fieldset>
+                    <fieldset className='create-f-img'>
+                        <legend>Image</legend>
+                        <input
+                            type="text"
+                            className='create-form-img'
+                            value={newForm.image}
+                            name="image"
+                            placeholder="image URL"
+                            onChange={handleChange}
+                        /> 
+                    </fieldset>
+                    <fieldset className='create-f-mins'>
+                        <legend>Ready In</legend>
+                        <input
+                            type="text"
+                            className='create-form-mins'
+                            value={newForm.readyInMinutes}
+                            name="readyInMinutes"
+                            placeholder="readyInMinutes"
+                            onChange={handleChange}
+                        /> 
+                    </fieldset>
+                </section>
+                <section className='form-bottom'>
+                    <fieldset className='create-f-description'>
+                        <legend>Instructions</legend>
+                        <textarea
+                            type="text"
+                            className='create-form-descrpition'
+                            value={newForm.instructions}
+                            name="instructions"
+                            placeholder="instructions"
+                            onChange={handleChange}
+                        /> 
+                    </fieldset>
+                </section>
                 <input type="submit" value="Create Recipe" />
             </form>
             {props.peopleRecipe ? loaded() : loading()}
