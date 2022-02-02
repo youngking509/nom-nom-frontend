@@ -16,10 +16,11 @@ import Videos from "../pages/Videos";
 
 function Main(props) {
     const [peopleRecipe, setPeopleRecipe] = useState(null);
-    const herokuUrl = 'https://nom-nom-api-22.herokuapp.com/';
+    const herokuUrl = 'https://nom-nom-api-22.herokuapp.com/recipes/';
 
     const getPeopleRecipe = async() => {
-        const response = await fetch(herokuUrl + "recipes");
+        // const response = await fetch(herokuUrl + "recipes");
+        const response = await fetch(herokuUrl);
         const data = await response.json();
         setPeopleRecipe(data);
     };
@@ -28,7 +29,7 @@ function Main(props) {
         await fetch(herokuUrl, {
             method: "POST",
             headers: {
-                "Content-Type": "Application/JSON"
+                "Content-Type": "Application/json"
             },
             body: JSON.stringify(eachRecipe)
         });
@@ -62,10 +63,9 @@ function Main(props) {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path="/recipes">
+                <Route exact path="/recipes">
                     <Recipes peopleRecipe={peopleRecipe} createPeopleRecipe={createPeopleRecipe} />
                 </Route>
-                {/* path to recipes id pass render props */}
                 <Route path="/recipes/:id" render={(rp) => (
                     <Show peopleRecipe={peopleRecipe} updatePeopleRecipe={updatePeopleRecipe} deletePeopleRecipe={deletePeopleRecipe} {...rp} />
                 )} />
