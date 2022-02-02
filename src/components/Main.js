@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import Recipes from "../pages/Recipes";
+import Show from "../pages/Show";
 import Videos from "../pages/Videos";
 
 // async await the Backend, 
@@ -13,41 +14,40 @@ import Videos from "../pages/Videos";
 // Update recipes using fetch pass as props into show by id route
 // Delete recipes using fetch pass as props into show by id route
 
-function Main() {
+function Main(props) {
     const [peopleRecipe, setPeopleRecipe] = useState(null);
-    // const URL = 'https://nom-nom-api-22.herokuapp.com/';
-    const URL = 'http://localhost:4000/recipes/';
+    const herokuUrl = 'https://nom-nom-api-22.herokuapp.com/';
 
     const getPeopleRecipe = async() => {
-        const response = await fetch(URL);
+        const response = await fetch(herokuUrl + "recipes");
         const data = await response.json();
         setPeopleRecipe(data);
     };
 
-    const createPeopleRecipe = async(recipe) => {
-        await fetch(URL, {
+    const createPeopleRecipe = async(eachRecipe) => {
+        await fetch(herokuUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "Application/JSON"
             },
-            body: JSON.stringify(recipe)
+            body: JSON.stringify(eachRecipe)
         });
         getPeopleRecipe();
     };
 
-    const updatePeopleRecipe = async (recipe, id) => {
-        await fetch(URL + id, {
+    const updatePeopleRecipe = async(eachRecipe, id) => {
+        await fetch(herokuUrl + id, {
           method: "PUT",
           headers: {
             "Content-Type": "Application/json",
           },
-          body: JSON.stringify(recipe),
+          body: JSON.stringify(eachRecipe),
         });
         getPeopleRecipe();
     };
 
-    const deletePeopleRecipe = async id => {
-        await fetch(URL + id, {
+    const deletePeopleRecipe = async(id) => {
+        await fetch(herokuUrl + id, {
           method: "DELETE",
         })
         getPeopleRecipe();
@@ -62,12 +62,13 @@ function Main() {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/recipes">
+                <Route path="/recipes">
                     <Recipes peopleRecipe={peopleRecipe} createPeopleRecipe={createPeopleRecipe} />
                 </Route>
                 {/* path to recipes id pass render props */}
-                {/* <Route path="/recipes/:id" peopleRecipe={peopleRecipe} updatePeopleRecipe={updatePeopleRecipe} deletePeopleRecipe={deletePeopleRecipe} {...rp} /> */}
-                <Route path="/recipes/:id" />
+                <Route path="/recipes/:id" render={(rp) => (
+                    <Show peopleRecipe={peopleRecipe} updatePeopleRecipe={updatePeopleRecipe} deletePeopleRecipe={deletePeopleRecipe} {...rp} />
+                )} />
                 <Route exact path="/videos">
                     <Videos />
                 </Route>

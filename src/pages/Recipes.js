@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Recipes(props) {
     const [newForm, setNewForm] = useState({
@@ -28,7 +29,9 @@ function Recipes(props) {
     const loaded = () => {
         return props.peopleRecipe.map((recipe) => (
             <div key={recipe._id} className="recipe">
-                <h1> {recipe.title} </h1>
+                <Link to={`/recipes/${recipe._id}`}>
+                    <h1> {recipe.title} </h1>
+                </Link>
                 { recipe.image && <img src={recipe.image} alt={recipe.name} />}
                 <p> Ready in {recipe.readyInMinutes} minutes </p>
                 <p> Instructions: {recipe.instructions}</p>
@@ -38,7 +41,6 @@ function Recipes(props) {
     const loading = () => {
         return <h1>Recipes...</h1>;
     };
-
 
     return (
         <div className="recipes">
