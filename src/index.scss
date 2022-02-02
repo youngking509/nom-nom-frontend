@@ -145,6 +145,44 @@
 
 // =========================== RECIPES ================================
 
+// .recepes {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.top-form {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.form-bottom {
+  width: 800px;
+}
+
+.rec-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 800px;
+}
+
+.rec {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.rec-img {
+  width: 390px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.rec-description {
+  width: 390px;
+}
+
 // =========================== RECIPES ID =============================
 
 // =========================== ABOUT US ===============================
