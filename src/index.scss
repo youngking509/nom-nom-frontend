@@ -40,6 +40,78 @@
 
 // =========================== HOME ===================================
 
+.api-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+  padding: 30px;
+  width: 700px;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.api-input {
+  height: 35px;
+  width: 40rem;
+  border-radius: 16px;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.api-search-btn {
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  height: 35px;
+  width: 70px;
+  margin-left: 15px;
+  border-radius: 16px;
+  border: none;
+  background-color: lightcoral;
+  color: white;
+}
+
+.api-card {
+  margin-bottom: 30px;
+  border-bottom: 2px solid black;
+  padding-bottom: 15px;
+  //padding: 15px;
+}
+
+.api-img {
+  object-fit: cover;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.RestaurantIcon {
+  transform: scale(0.8);
+  position: relative;
+  top: 5px;
+
+}
+
+.DinnerDiningIcon {
+  position: relative;
+  top: 5px;
+}
+
+.api-title {
+  font-size: 15px;
+  margin: 10px 0px;
+}
+
+.api-instructions {
+  width: 700px;
+  font-size: 12px;
+}
+
 // =========================== RECIPES ================================
 
 // =========================== RECIPES ID =============================
@@ -92,7 +164,7 @@
 // =========================== CONTACT ================================
 
 .contact-form {
-  background-color: pink;
+  background-color: lightcoral;
   width: 350px;
   border-radius: 10px;
   padding: 20px;
@@ -101,7 +173,7 @@
 
 .contact-fieldset {
   border-radius: 10px;
-  border: .5px solid gray;
+  border: .5px solid black;
   margin: 5px;
 }
 
@@ -159,10 +231,22 @@
 
 // =========================== MEDIA ==================================
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+  
   .main {
     margin: 9rem 1rem;
   }
+
+  .api-search, .api-form, .api-instructions, .api-img {
+    width: 90vw;
+  }
+
+  .api-input {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
 
   .logo-aboutus {
     width: 80vw;
