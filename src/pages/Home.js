@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import RestaurantIcon from '@mui/icons-material/Restaurant';
-import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 //import SearchIcon from '@mui/icons-material/Search';
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
     const [formState, setFormState] = useState({
         searchTerm: "",
     });
+    const [toggle, setToggle] = useState(false);
 
     const handleChange = (evt) => {
         setFormState({searchTerm: evt.target.value});
@@ -27,7 +29,7 @@ function Home() {
     };
     
     const getRecipe = async(searchTerm) => {
-        const URL = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=8&tags=${searchTerm}`;
+        const URL = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=4&tags=${searchTerm}`;
         const response = await fetch(URL);
         const data = await response.json();
         setRecipes(data.recipes);
@@ -57,8 +59,16 @@ function Home() {
                         <div key={i} className='api-card'>
                             <img src={recipe.image} alt={recipe.title} className='api-img'/>
                             <h3 className='api-title'> <RestaurantIcon className='RestaurantIcon'/> {recipe.title} </h3>
-                            <div className='api-instructions'> Instructions: {recipe.instructions.replaceAll('<li>', ' ').replaceAll('</li>', ' ').replaceAll('<ol>', ' ').replaceAll('</ol>', ' ')}</div>
-                            <p className='api-ready'> Ready in {recipe.readyInMinutes} min <DinnerDiningIcon className='DinnerDiningIcon' /></p>
+                            <div className="instructions-title">
+                                <h5>Instructions:</h5>
+                                <button onClick={() => setToggle(!toggle)} className='VisibilityIcon'>
+                                    <VisibilityIcon />
+                                </button>
+                            </div>
+                            <div className='api-instructions'>  
+                            {toggle && (recipe.instructions.replaceAll('<li>', ' ').replaceAll('</li>', ' ').replaceAll('<ol>', ' ').replaceAll('</ol>', ' '))}
+                            </div>
+                            <p className='api-ready'> Ready in {recipe.readyInMinutes} min <AccessTimeIcon className='DinnerDiningIcon' /></p>
                         </div>
                     ))
                 }
@@ -67,11 +77,11 @@ function Home() {
                 <h1>VIDEOS</h1>
                 </Link>
                 <div className="home-videos-container">
-                    <div className="video1">
-                        <iframe width="360" height="215" src="https://www.youtube.com/embed/-JkcZRBUNtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div className="video1-home">
+                        <iframe width="760" height="450" src="https://www.youtube.com/embed/-JkcZRBUNtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="video1-home"></iframe>
                 </div>
-                    <div className="video2">
-                        <iframe width="360" height="215" src="https://www.youtube.com/embed/TdwrGGv-T6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div className="video2-home">
+                        <iframe width="760" height="450" src="https://www.youtube.com/embed/TdwrGGv-T6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="video2-home"></iframe>
                 </div>
                 </div>
             </div>

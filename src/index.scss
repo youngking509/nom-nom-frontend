@@ -48,7 +48,7 @@
   padding: 30px;
   width: 780px;
   border-radius: 10px;
-  background-color: #000;
+  background-color: lightcoral;
 }
 
 .api-input {
@@ -90,6 +90,20 @@
   border-radius: 10px;
 }
 
+.instructions-title {
+  display: flex;
+  align-items: center;
+}
+
+.VisibilityIcon {
+  border: none;
+  background-color: transparent;
+  margin: 0px 5px;
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+}
+
 .RestaurantIcon {
   transform: scale(0.8);
   position: relative;
@@ -103,13 +117,14 @@
 }
 
 .api-title {
-  font-size: 15px;
+  font-size: 18px;
   margin: 10px 0px;
 }
 
 .api-instructions {
   width: 780px;
   font-size: 12px;
+  //transition: 0.8s ease-in-out;
 }
 
 .home-videos-title {
@@ -118,11 +133,11 @@
 }
 
 .home-videos-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: 1fr;
+  // grid-column-gap: 20px;
+  // grid-row-gap: 20px;
   background-color: #000;
   padding: 20px;
   border-radius: 10px;
@@ -287,7 +302,16 @@
   .home-videos-container {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 450px;
+  }
+
+  .video1-home {
+    width: 410px;
+    height: 260px;
+  }
+  .video2-home {
+    width: 410px;
+    height: 260px;
   }
 }
 
