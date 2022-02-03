@@ -1,9 +1,10 @@
 import logoCircle from "../NomNomSVG/Circle-text.svg";
 import logo from "../NomNomSVG/Bite.svg";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function About() {
     return (
-        <div class="about-section">
+        <div className="about-section">
             <div className="logo-aboutus">
                 <img src={logoCircle} alt="logoCircle" className="circle-aboutus"/>
                 <img src={logo} alt="logo" className="bite-aboutus"/>
@@ -14,9 +15,9 @@ function About() {
             <div className="team-members">
                 <h4>Team Members</h4>
                 <ul>
-                    <li className="members">Von Bell</li>
-                    <li className="members">Chris Dazzo</li>
-                    <li className="members">Kingzy Valcourt</li>
+                    <li className="members"><a href="https://www.linkedin.com/in/vonvbell/" target="_blank"><LinkedInIcon /></a>Von Bell</li>
+                    <li className="members"><a href="https://www.linkedin.com/in/chris-dazzo/" target="_blank"><LinkedInIcon /></a>Chris Dazzo</li>
+                    <li className="members"><a href="https://www.linkedin.com/in/kingzy-valcourt-9006ba31/" target="_blank"><LinkedInIcon /></a>Kingzy Valcourt</li>
                 </ul>
             </div>
         </div>
