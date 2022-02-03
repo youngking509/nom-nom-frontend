@@ -29,11 +29,12 @@ Nom-Nom is a content driven web app that allows users to create, update and dele
 ## Features
 * Users can Create, Read, Update, and Delete recipes, description, and pictures. 
 
-## Whiteboard Images
+## Images
 *Original Whiteboard sketch
+![Screen Shot 2022-02-03 at 1 24 30 PM](https://user-images.githubusercontent.com/94661081/152431845-4a4d99bb-57d7-4e29-a272-fe5be65f806d.png)
+![Screen Shot 2022-02-03 at 1 25 59 PM](https://user-images.githubusercontent.com/94661081/152431865-673cc642-5e50-45e9-9a83-8fa393a47b0a.png)
 
-![Image](file:///Users/kingzy/Desktop/Screen_Shot_2022-01-30_at_8.19.39_AM.png)
-![Image](file:///Users/kingzy/Desktop/Screen_Shot_2022-01-30_at_8.24.26_AM.png)
+
 
 ## Trello Planning
 * Link to Trello: https://trello.com/b/BIVUMjgx/recipe-app-group-project
