@@ -10,7 +10,12 @@
     width: 100vw;
     z-index: 20;
     background-color: whitesmoke;
+    transition: 0.2s ease;
     font-family: 'Dongle', sans-serif;
+}
+
+.navBar-active {
+    transform: translateY(-75px);
 }
 
 .nav-left {
@@ -25,6 +30,7 @@
     top: 20px;
     font-weight: 700;
     font-size: 24px;
+    //transition: 2s ease-in-out;
     .recipes-link {
         margin-right: 15px;
         text-decoration: none;
