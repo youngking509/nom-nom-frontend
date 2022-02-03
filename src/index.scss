@@ -297,12 +297,14 @@
   width: 400px;
   height: 500px;
   object-fit: cover;
+  border-radius: 15px 0px 0px 0px;
 }
 
 .show-des-container {
   width: 400px;
   height: 500px;
   padding: 20px;
+  border-radius: 0px 15px 0px 0px;
   background-color: whitesmoke;
 }
 
@@ -352,6 +354,13 @@
 
 .members {
   list-style-type: none;
+  a {
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    right: 3px;
+    color: #000;
+  }
 }
 
 
@@ -463,6 +472,68 @@
     width: 410px;
     height: 260px;
   }
+  .create-form {
+    width: 93vw;
+  }
+  .top-form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    .create-f-title {
+      .create-form-title{
+        width: 76vw;
+      }
+    }
+    .create-f-img {
+      margin-top: 10px;
+      .create-form-img {
+        width: 76vw;
+      }
+    }
+    .create-f-mins {
+      margin-top: 10px;
+      .create-form-mins {
+        width: 76vw;
+      }
+    }
+  }
+  .form-bottom {
+    width: 85vw;
+    .create-f-description {
+      .create-form-descrpition {
+        max-width: 76vw;
+        min-width: 76vw;
+      }
+    }
+  }
+  .rec-container {
+    display: flex;
+    flex-direction: column;
+    width: 93vw;
+  }
+  .rec-img {
+    width: 93vw;
+    height: 55vh;
+  }
+  .rec-bottom {
+    width: 93vw;
+  }
+  .show-card {
+    display: flex;
+    flex-direction: column;
+    width: 93vw;
+  }
+  .show-img {
+    width: 93vw;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .show-des-container {
+    width: 93vw;
+    height: auto;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+    bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -485,5 +556,7 @@
 
   .aboutus-content {
     width: 90vw;
+    position: relative;
+    bottom: 100px;
   }
 }
