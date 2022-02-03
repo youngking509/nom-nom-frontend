@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# The Recipe App (Nom-Nom)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### A full crud web app designed to share random recipes 
+<img src="./Images/.png" alt=""/>
+<img src="./Images/.png" alt=""/>
+<img src="./Images/.png" alt=""/>
 
-## Available Scripts
+## Description
+Nom-Nom is a content driven web app that allows users to create, update and delete recipies. While providing a search for recipes based on key word and videos for inporation. Created by a group of devs who wanted to combine our interests of cooking into an app.
 
-In the project directory, you can run:
+## Table of Contents
+* [Technologies Used](#technologiesused)
+* [Features](#features)
+* [Design](#design)
+* [Project Next Steps](#nextsteps)
+* [Deployed App](#deployment)
+* [About the Author](#author)
 
-### `npm start`
+## <a name="technologiesused"></a>Technologies Used
+* JavaScript
+* HTML5
+* CSS3
+* Node.js
+* MongoDB
+* React.js
+* Express.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+* Users can Create, Read, Update, and Delete recipes, description, and pictures. 
 
-### `npm test`
+## Whiteboard Images
+*Original Whiteboard sketch
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Image](file:///Users/kingzy/Desktop/Screen_Shot_2022-01-30_at_8.19.39_AM.png)
+![Image](file:///Users/kingzy/Desktop/Screen_Shot_2022-01-30_at_8.24.26_AM.png)
 
-### `npm run build`
+## Trello Planning
+* Link to Trello: https://trello.com/b/BIVUMjgx/recipe-app-group-project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## <a name="design"></a>Design
+* Design elements implemented using React.js. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## <a name="nextsteps"></a>Project Next Steps
+* Users can change the theme.
+* Users can leave comments on parks
+* Park model will be nested in city model
+* Users will be able to login to edit or post
 
-### `npm run eject`
+## <a name="deployment"></a>Deployed Link
+[Netlify](https://nom-nom.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* You can view the repository:
+[Github.com](https://github.com/youngking509/nom-nom-frontend  https://github.com/youngking509/nom-nom-backend) 
+* If unable to view run npm run dev in terminal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## <a name="author"></a>About The Author
+We build .....
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    
+## Works Cited:
+* N/A
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Special Colaborators:
+* Von Bell
+* Kingzy Valcourt
+* Christopher Dazzo
