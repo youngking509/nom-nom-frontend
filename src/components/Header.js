@@ -9,9 +9,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
     const [showLinks, setShowLinks] = useState(false);
+    const [ navBar, setNavShow ] = useState(false);
+    let userScrollY = window.scrollY;
+    const controlNav = () => {
+        if (userScrollY < window.scrollY) {
+            setNavShow(true)
+        } else {
+            setNavShow(false)
+        }
+    };
+
+    window.addEventListener('scroll', controlNav);
 
     return (
-        <nav className="navBar">
+        <nav className={navBar ? 'navBar-active' : 'navBar'}>
             <div className="nav-left">
                 <Link to="/">
                     <img src={logo} alt="Logo" className="logo"/>

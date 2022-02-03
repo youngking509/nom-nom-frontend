@@ -1,7 +1,6 @@
 // async await the spoonacular API and pass the info in the section 
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import RestaurantIcon from '@mui/icons-material/Restaurant';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 //import SearchIcon from '@mui/icons-material/Search';
@@ -58,7 +57,7 @@ function Home() {
                     recipes.map((recipe, i) => (
                         <div key={i} className='api-card'>
                             <img src={recipe.image} alt={recipe.title} className='api-img'/>
-                            <h3 className='api-title'> <RestaurantIcon className='RestaurantIcon'/> {recipe.title} </h3>
+                            <h3 className='api-title'> {recipe.title} </h3>
                             <div className="instructions-title">
                                 <h5>Instructions:</h5>
                                 <button onClick={() => setToggle(!toggle)} className='VisibilityIcon'>
@@ -68,7 +67,7 @@ function Home() {
                             <div className='api-instructions'>  
                             {toggle && (recipe.instructions.replaceAll('<li>', ' ').replaceAll('</li>', ' ').replaceAll('<ol>', ' ').replaceAll('</ol>', ' '))}
                             </div>
-                            <p className='api-ready'> Ready in {recipe.readyInMinutes} min <AccessTimeIcon className='DinnerDiningIcon' /></p>
+                            <p className='api-ready'> Cook Time {recipe.readyInMinutes} min <AccessTimeIcon className='DinnerDiningIcon' /></p>
                         </div>
                     ))
                 }
@@ -78,10 +77,10 @@ function Home() {
                 </Link>
                 <div className="home-videos-container">
                     <div className="video1-home">
-                        <iframe width="760" height="450" src="https://www.youtube.com/embed/-JkcZRBUNtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="video1-home"></iframe>
+                        <iframe width="760" height="450" src="https://www.youtube.com/embed/-JkcZRBUNtw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="video1-home"></iframe>
                 </div>
                     <div className="video2-home">
-                        <iframe width="760" height="450" src="https://www.youtube.com/embed/TdwrGGv-T6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="video2-home"></iframe>
+                        <iframe width="760" height="450" src="https://www.youtube.com/embed/TdwrGGv-T6s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="video2-home"></iframe>
                 </div>
                 </div>
             </div>

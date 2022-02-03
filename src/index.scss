@@ -145,26 +145,107 @@
 
 // =========================== RECIPES ================================
 
-// .recepes {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.create-form {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: lightcoral;
+  border-radius: 10px;
+}
 
 .top-form {
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  margin-top: 10px;
+  width: 760px;
+  .create-f-title {
+    width: 236.6px;
+    border-radius: 5px;
+    border: .5px solid black;
+    .create-form-title {
+      margin: 20px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 200px;
+      height: 40px;
+    }
+  }
+  .create-f-img {
+    width: 236.6px;
+    border-radius: 5px;
+    border: .5px solid black;
+    .create-form-img {
+      margin: 20px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 200px;
+      height: 40px;
+    }
+  }
+  .create-f-mins {
+    width: 236.6px;
+    border-radius: 5px;
+    border: .5px solid black;
+    .create-form-mins {
+      margin: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+      height: 40px;
+    }
+  }
 }
 
 .form-bottom {
-  width: 800px;
+  width: 760px;
+  margin: 10px 0px 15px 0px;
+  .create-f-description {
+    border-radius: 5px;
+    border: .5px solid black;
+    .create-form-descrpition {
+      margin: 20px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      max-width: 716px;
+      min-width: 716px;
+      min-height: 40px;
+      max-height: 100px;
+      overflow: hidden;
+    }
+  }
 }
 
+.create-update-btn {
+  width: 80px;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+// ============= Items
+
 .rec-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   width: 800px;
 }
 
@@ -173,17 +254,62 @@
   margin-top: 20px;
 }
 
+.rec-title {
+  padding-bottom: 10px;
+}
+
+.rec-link {
+  text-decoration: none;
+  color: #000;
+}
+
 .rec-img {
   width: 390px;
   height: 400px;
   object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.rec-bottom {
+  background-color: whitesmoke;
+  position: relative;
+  bottom: 8px;
+  width: 390px;
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .rec-description {
-  width: 390px;
+  // width: 390px;
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 // =========================== RECIPES ID =============================
+
+.show-card {
+  display: flex;
+  width: 800px;
+  margin-bottom: 30px;
+}
+
+.show-img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.show-des-container {
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.show-instructions {
+  font-size: 14px;
+  margin: 0px 0px 10px 0px;
+}
 
 // =========================== ABOUT US ===============================
 
@@ -243,12 +369,12 @@
 .contact-fieldset {
   border-radius: 10px;
   border: .5px solid black;
-  margin: 5px;
+  margin: 10px 0px;
 }
 
 .contact-input {
   height: 40px;
-  width: 90%;
+  width: 277px;
   margin: 15px;
   padding: 10px;
   font-size: 16px;
@@ -262,8 +388,8 @@
 }
 
 .contact-textarea {
-  max-width: 266.39px;
-  min-width: 266.39px;
+  max-width: 277px;
+  min-width: 277px;
   margin: 15px;
   padding: 10px;
   font-size: 16px;
@@ -273,20 +399,6 @@
   &:focus {
     outline: 0;
     border: 2px solid lightcoral;
-  }
-}
-
-.submit-btn {
-  width: 80px;
-  height: 30px;
-  margin-top: 10px;
-  border-radius: 20px;
-  border: none;
-  position: relative;
-  left: 225px;
-
-  &:hover{
-    background-color: yellowgreen;
   }
 }
 
