@@ -1,9 +1,9 @@
 # The Recipe App (Nom-Nom)
 
 #### A full crud web app designed to share random recipes 
-<img src="./Images/.png" alt=""/>
-<img src="./Images/.png" alt=""/>
-<img src="./Images/.png" alt=""/>
+![Screen Shot 2022-02-03 at 1 25 02 PM](https://user-images.githubusercontent.com/94661081/152433679-0fedf0db-4e47-4035-aecb-be4bb44e73b4.png)
+
+
 
 ## Description
 Nom-Nom is a content driven web app that allows users to create, update and delete recipies. While providing a search for recipes based on key word and videos for inporation. Created by a group of devs who wanted to combine our interests of cooking into an app.
@@ -44,10 +44,10 @@ Nom-Nom is a content driven web app that allows users to create, update and dele
 
 
 ## <a name="nextsteps"></a>Project Next Steps
-* Users can change the theme.
-* Users can leave comments on parks
-* Park model will be nested in city model
-* Users will be able to login to edit or post
+* Add authentication/authorization 
+* Users will be able to log in (user/admin accounts)
+* Video api search 
+*
 
 ## <a name="deployment"></a>Deployed Link
 [Netlify](https://nom-nom.netlify.app/)
@@ -57,14 +57,14 @@ Nom-Nom is a content driven web app that allows users to create, update and dele
 * If unable to view run npm run dev in terminal
 
 
-## <a name="author"></a>About The Author
-We build .....
+## <a name="author"></a>About The Authors
+Some cool software engineers who build apps.
 
     
 ## Works Cited:
 * N/A
 
 ## Special Colaborators:
-* Von Bell
-* Kingzy Valcourt
-* Christopher Dazzo
+* Von Bell => https://www.linkedin.com/in/vonvbell/
+* Kingzy Valcourt => https://www.linkedin.com/in/kingzy-valcourt/
+* Christopher Dazzo => https://www.linkedin.com/in/chris-dazzo/
