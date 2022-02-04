@@ -1,17 +1,20 @@
-
+import Jump from "../NomNomSVG/Jump.svg";
 
 function Contact() {
     return (
         <div>
+            <div className="jump-container">
+                <img src={Jump} alt="jump" className='jump'/>
+            </div>
             <div className="contact-form">
                 <h1>Contact us</h1>
                 <fieldset className="contact-fieldset">
                     <legend className="contact-legend">Name</legend>
-                    <input type="name" className="contact-input" />
+                    <input type="name" placeholder='"Jimmy John"' className="contact-input" />
                 </fieldset>
                 <fieldset className="contact-fieldset">
                     <legend className="contact-legend">Email</legend>
-                    <input type="email" className="contact-input" /> <br />
+                    <input type="email" placeholder='"@email.com"' className="contact-input" /> <br />
                 </fieldset>
                 <fieldset className="contact-fieldset">
                 <legend className="contact-legend">Comment</legend>

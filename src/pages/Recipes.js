@@ -97,7 +97,7 @@ function Recipes(props) {
                             className='create-form-descrpition'
                             value={newForm.instructions}
                             name="instructions"
-                            placeholder="Directions..."
+                            placeholder="Chop...Simmer...Salt...Pepper..."
                             onChange={handleChange}
                         /> 
                     </fieldset>

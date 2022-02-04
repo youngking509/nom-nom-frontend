@@ -28,16 +28,16 @@ function Header() {
                     <img src={logo} alt="Logo" className="logo"/>
                 </Link>
                 <div className="nav-links" id={showLinks ? "hidden" : ""}>
-                    <Link to="/recipes" className="recipes-link">
+                    <Link to="/recipes" className="recipes-link" onClick={() => setShowLinks(!showLinks)}>
                         <div>RECIPES</div>
                     </Link>
-                    <Link to="/videos" className="videos-link">
+                    <Link to="/videos" className="videos-link" onClick={() => setShowLinks(!showLinks)}>
                         <div>VIDEOS</div>
                     </Link>
-                    <Link to="/about" className="about-link">
+                    <Link to="/about" className="about-link" onClick={() => setShowLinks(!showLinks)}>
                         <div>ABOUT</div>
                     </Link>
-                    <Link to="/contact" className="contact-link">
+                    <Link to="/contact" className="contact-link" onClick={() => setShowLinks(!showLinks)}>
                         <div>CONTACT</div>
                     </Link>
                 </div>
