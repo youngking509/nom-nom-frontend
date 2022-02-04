@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+$lightGreen: #ccd5ae;
+$black: #000;
+$white: #fff;
+$lightGray: #f5f5f5;
+
 * {
   margin: 0;
   padding: 0;
@@ -42,19 +47,20 @@
 
 .api-form {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 15px 0px;
   padding: 30px;
   width: 780px;
   border-radius: 10px;
-  background-color: lightcoral;
+  background-color: $black;
 }
 
 .api-input {
   height: 35px;
-  width: 40rem;
-  border-radius: 16px;
+  width: 35rem;
+  border-radius: 7px;
   border: none;
   padding: 15px;
   font-size: 16px;
@@ -67,19 +73,23 @@
 .api-search-btn {
   cursor: pointer;
   position: relative;
-  top: 5px;
   height: 35px;
-  width: 70px;
+  width: 90px;
   margin-left: 15px;
   border-radius: 16px;
   border: none;
-  background-color: lightcoral;
-  color: white;
+  background-color: $lightGreen;
+  color: $black;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $white;
+  }
 }
 
 .api-card {
   margin-bottom: 30px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $black;
   padding-bottom: 15px;
   //padding: 15px;
 }
@@ -97,10 +107,16 @@
 
 .VisibilityIcon {
   border: none;
+  -webkit-border: none;
+  -moz-border: none;
+  color: $black;
+  -webkit-color: $black;
+  -moz-color: $black;
   background-color: transparent;
+  -webkit-background-color: transparent;
+  -moz-background-color: transparent;
   margin: 0px 5px;
   position: relative;
-  top: 2px;
   cursor: pointer;
 }
 
@@ -128,7 +144,7 @@
 }
 
 .home-videos-title {
-  color: #000;
+  color: $black;
   text-decoration: none;
 }
 
@@ -138,7 +154,7 @@
   // grid-template-rows: 1fr;
   // grid-column-gap: 20px;
   // grid-row-gap: 20px;
-  background-color: #000;
+  background-color: $black;
   padding: 20px;
   border-radius: 10px;
   }
@@ -148,7 +164,7 @@
 .create-form {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: lightcoral;
+  background-color: $lightGreen;
   border-radius: 10px;
 }
 
@@ -160,7 +176,7 @@
   .create-f-title {
     width: 236.6px;
     border-radius: 5px;
-    border: .5px solid black;
+    border: .5px solid $black;
     .create-form-title {
       margin: 20px;
       padding: 10px;
@@ -174,7 +190,7 @@
   .create-f-img {
     width: 236.6px;
     border-radius: 5px;
-    border: .5px solid black;
+    border: .5px solid $black;
     .create-form-img {
       margin: 20px;
       padding: 10px;
@@ -188,7 +204,7 @@
   .create-f-mins {
     width: 236.6px;
     border-radius: 5px;
-    border: .5px solid black;
+    border: .5px solid $black;
     .create-form-mins {
       margin: 20px;
       padding: 10px;
@@ -206,7 +222,7 @@
   margin: 10px 0px 15px 0px;
   .create-f-description {
     border-radius: 5px;
-    border: .5px solid black;
+    border: .5px solid $black;
     .create-form-descrpition {
       margin: 20px;
       padding: 10px;
@@ -228,13 +244,13 @@
   border-radius: 20px;
   margin-right: 10px;
   border: none;
-  background-color: #000;
-  color: #fff;
+  background-color: $black;
+  color: $white;
   transition: 0.2s ease-in-out;
 
   &:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: $white;
+    color: $black;
   }
 }
 
@@ -260,7 +276,7 @@
 
 .rec-link {
   text-decoration: none;
-  color: #000;
+  color: $black;
 }
 
 .rec-img {
@@ -271,7 +287,7 @@
 }
 
 .rec-bottom {
-  background-color: whitesmoke;
+  background-color: $lightGray;
   position: relative;
   bottom: 8px;
   width: 390px;
@@ -305,7 +321,7 @@
   height: 500px;
   padding: 20px;
   border-radius: 0px 15px 0px 0px;
-  background-color: whitesmoke;
+  background-color: $lightGray;
 }
 
 .show-instructions {
@@ -359,7 +375,7 @@
     position: relative;
     top: 5px;
     right: 3px;
-    color: #000;
+    color: $black;
   }
 }
 
@@ -368,7 +384,7 @@
 // =========================== CONTACT ================================
 
 .contact-form {
-  background-color: lightcoral;
+  background-color: $lightGreen;
   width: 350px;
   border-radius: 10px;
   padding: 20px;
@@ -377,7 +393,7 @@
 
 .contact-fieldset {
   border-radius: 10px;
-  border: .5px solid black;
+  border: .5px solid $black;
   margin: 10px 0px;
 }
 
@@ -392,7 +408,7 @@
 
   &:focus {
     outline: 0;
-    border: 2px solid lightcoral;
+    border: 2px solid $lightGreen;
   }
 }
 
@@ -407,8 +423,18 @@
 
   &:focus {
     outline: 0;
-    border: 2px solid lightcoral;
+    border: 2px solid $lightGreen;
   }
+}
+
+.jump-container {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+}
+
+.jump {
+  width: 14rem;
 }
 
 // =========================== VIDEOS =================================
@@ -419,7 +445,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  background-color: #000;
+  background-color: $black;
   padding: 20px;
   border-radius: 10px;
   }
@@ -450,7 +476,7 @@
   }
 
   .api-input {
-    width: 75vw;
+    width: 53vw;
   }
 
   .videos-container {
@@ -461,16 +487,16 @@
   .home-videos-container {
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 90vw;
   }
 
   .video1-home {
-    width: 410px;
-    height: 260px;
+    width: 82vw;
+    height: 30vh;
   }
   .video2-home {
-    width: 410px;
-    height: 260px;
+    width: 82vw;
+    height: 30vh;
   }
   .create-form {
     width: 93vw;
@@ -557,6 +583,37 @@
   .aboutus-content {
     width: 90vw;
     position: relative;
-    bottom: 100px;
+    bottom: 75px;
+  }
+  .top-form {
+    display: flex;
+    flex-direction: column;
+    width: 76vw;
+    .create-f-title {
+      .create-form-title{
+        width: 72vw;
+      }
+    }
+    .create-f-img {
+      margin-top: 10px;
+      .create-form-img {
+        width: 72vw;
+      }
+    }
+    .create-f-mins {
+      margin-top: 10px;
+      .create-form-mins {
+        width: 72vw;
+      }
+    }
+  }
+  .form-bottom {
+    width: 80vw;
+    .create-f-description {
+      .create-form-descrpition {
+        max-width: 72vw;
+        min-width: 72vw;
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-//import SearchIcon from '@mui/icons-material/Search';
+
 
 function Home() {
     const apiKey = '4dc09cfe49ba42d4a768ccef738b15bb';
@@ -46,7 +46,7 @@ function Home() {
                     <div className='api-form'>
                         <form onSubmit={handleSubmit}>
                             <input type="text" value={formState.searchTerm} onChange={handleChange} placeholder='Search for "pasta"' className='api-input'/>
-                            {/* <input type="submit" value="submit" className="api-search-btn" /> */}
+                            <input type="submit" value="submit" className="api-search-btn" />
                             {/* <button className="api-search-btn">
                                 <SearchIcon />
                             </button> */}
@@ -81,7 +81,7 @@ function Home() {
                 </div>
                     <div className="video2-home">
                         <iframe width="760" height="450" src="https://www.youtube.com/embed/TdwrGGv-T6s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="video2-home"></iframe>
-                </div>
+                    </div>
                 </div>
             </div>
         );
